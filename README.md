@@ -1,16 +1,15 @@
-# DECORA Invoice Generator V3
+# DECORA Invoice Generator V4
 
-Static website: upload index.html, app.js, style.css and assets/ to your existing GitHub Pages repository root. No build or backend. Use Chrome or Edge. Existing V1/V2 storage keys are retained; export a backup before updating.
+Static GitHub Pages website. Upload all files in this directory to the existing repository root, including assets, manifest.webmanifest, mobile.js and sw.js. Keep Pages configured to main / (root). No build step or external dependencies.
 
-## Usage
-- Enter invoice details and work items. Detailed descriptions accept headings and bullet lines beginning with •, - or *.
-- Add advance payments with optional dates. Use the layout handles or arrows to reorder, select payments to group, or split a group. Add charges and page breaks from Invoice layout.
-- Summary placement: Automatic flows into available space; Separate page starts the final summary on a fresh sheet when work already spans multiple pages. Manual page breaks can force a new page even for short invoices.
-- Long Sample loads invoice 3100 from the reference, with three pages and balance 900693. Load Sample loads invoice 4000.
-- Print / Save PDF: choose A4, no browser headers/footers, 100% scale. Download page PNG exports the selected page; All pages ZIP exports individual images; Combined PNG joins pages (maximum eight).
-- Saved invoices and backups stay in the browser. Public hosting exposes logo and signature assets; do not commit customer invoice backups to a public repository.
+## Mobile
+Edit, Preview and History tabs at widths up to 900px. Expand work cards to edit; use layout handles or arrows to reorder. Preview defaults to Fit screen; use Previous/Next or swipe at fit zoom. Export from the bottom bar. Native PNG sharing is attempted when supported, otherwise downloads. Combined PNG is limited to three pages on mobile and eight on desktop; ZIP is the alternative. Print uses the browser print dialog.
+
+## Install / offline
+After visiting the deployed HTTPS site online, allow the service worker to finish caching. Android Chrome: browser menu > Install app / Add to Home screen. iPhone Safari: Share > Add to Home Screen. Installation and offline availability depend on browser support and storage retention. Local file opening does not enable service workers. Saved invoices remain in localStorage under the V1 keys, not synced between devices. Export a backup before upgrading or clearing site data.
+
+## Existing functionality
+A4 pagination, split descriptions, payment groups, dates, additional charges, page breaks, summary placement, PDF printing, PNG and ZIP export, favicon and original branding retained. The public site includes the signature asset; do not publish it if it must remain private.
 
 ## Verification
-Chromium inline browser tests: long sample 3 pages, correct balance, PDF 3 pages, PNG 2480 x 3508, ZIP contains 3 valid PNG entries, short sample 1 page, no-payment sample one Total. Direct file/localhost navigation was blocked by the test environment, so deployed URL and touch interaction remain to be tested. PNG uses SVG foreignObject and canvas; browser support can vary.
-
-Browser tab favicon: assets/favicon.ico and assets/favicon.png (DECORA logo).
+JavaScript syntax checked; inline Chromium mobile viewport test verified three-page sample, fit width, next page and PNG canvas dimensions. HTTP navigation blocked by test environment; deployed service worker/offline, native share, installation and physical-device touch tests remain to be verified. Full-screen and file sharing depend on browser capabilities. Mobile export uses the same fixed A4 geometry as desktop.
