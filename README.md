@@ -1,4 +1,4 @@
-# DECORA Invoice Generator V4
+# DECORA Invoice Generator V5
 
 Static GitHub Pages website. Upload all files in this directory to the existing repository root, including assets, manifest.webmanifest, mobile.js and sw.js. Keep Pages configured to main / (root). No build step or external dependencies.
 
@@ -13,3 +13,8 @@ A4 pagination, split descriptions, payment groups, dates, additional charges, pa
 
 ## Verification
 JavaScript syntax checked; inline Chromium mobile viewport test verified three-page sample, fit width, next page and PNG canvas dimensions. HTTP navigation blocked by test environment; deployed service worker/offline, native share, installation and physical-device touch tests remain to be verified. Full-screen and file sharing depend on browser capabilities. Mobile export uses the same fixed A4 geometry as desktop.
+
+## V5 work catalogue
+315 English work names in 21 categories. Type any name (including Malayalam) or browse/search; no catalogue match required. Optional details are collapsed. Apply area explicitly to the existing quantity; saved rates are applied explicitly, never automatically. Copy specifications into the existing description to print them. Custom works are stored separately in this browser (invoice backup does not include the custom catalogue). Existing invoice storage keys and PDF renderer remain unchanged. Built-in Malayalam translations are not included in this release.
+
+V5 checks: Chromium mobile viewport tested autocomplete, manual names, area calculation, custom catalogue saving, browsing and long sample pagination. Live service worker, physical devices and export regression testing remain outstanding.
