@@ -1,3 +1,7 @@
+# DECORA V5.5.1 – Mobile Insert selection fix
+
+The inline Insert control now retains the selected row type across mobile picker interactions, and the button displays the selected type (for example, “+ Insert Discount”). This prevents accidental Balance / subtotal insertion when Discount is selected. Existing invoice appearance and financial calculations are unchanged.
+
 # DECORA V5.4 – Free-form Invoice Row Builder
 
 ## Plan implemented
@@ -22,3 +26,8 @@ The order-aware calculated balance is separate from any manual displayed overrid
 - Insert signed positive/negative adjustments.
 - Adjustments follow the row order and update running and final balance calculations.
 - All rows persist in the existing invoice state and JSON backup. Printable A4 template is unchanged.
+
+## V5.5.2 correction
+- Fixed Discount and Round-off editor rendering: shared dropdown helper is now available to every row type. Previously these rows triggered a ReferenceError after insertion.
+- Discount and Round-off editor headings now respect their custom labels.
+- Existing invoice preview styling and calculation rules are unchanged.
