@@ -11,3 +11,11 @@ Note: invoice title remains a protected label; financial totals and work-item da
 - Styled native logo and signature file inputs in Settings with consistent picker button sizes and format hints. Existing input IDs and file handlers unchanged.
 - Updated offline service worker cache and asset query versions to 6.3.
 - Browser/device testing (especially multi-page PDF and mobile touch) remains recommended before production deployment.
+
+
+## V6.4 — Invoice Edit advance-payment card refinement
+- Advance payments now appear in individual numbered cards, with the existing remove action moved to each card header instead of beside the Date input.
+- Payment Label and Amount share an aligned two-column grid; Date spans full width. On very narrow screens the two fields stack.
+- Preserves the same field bindings, payment deletion callback, recalculation, invoice layout, stored data, template designer, Classic invoice, and exports.
+- Screen-only CSS scoped to #advances; no invoice paper or print styles changed.
+- Automated syntax/archive checks performed; browser/mobile regression testing still required.
