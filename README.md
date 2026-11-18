@@ -1,3 +1,7 @@
+# DECORA V6.5
+
+Work Particulars editor cards now have numbered headers, header-level remove controls, compact responsive fields, and a consistent red outlined remove action for subtotal/total and other removable layout rows. Existing calculations, printed invoice renderer, templates and backup formats are unchanged.
+
 # DECORA V6.2
 
 Builds on V6.1. Custom template designer now offers draggable business address, terms paragraph, logo, business name, invoice title, signature and custom text/paragraph blocks; selection resize handles and properties for custom text width, font size and alignment. Load Sample, Load Long Sample and Reference Layout have new consistent action cards with their original event IDs and handlers preserved. Classic remains the default and unmodified.
