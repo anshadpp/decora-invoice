@@ -1,30 +1,18 @@
-# DECORA V5.7 — Optional Invoice Design Studio
+# DECORA Invoice Generator V5.8 — Visual Designer Preview
 
-Based on DECORA V5.6.1. Classic DECORA remains the default and its original invoice markup/rendering path is unchanged unless a custom template is selected.
+This release extends V5.7 without replacing the Classic DECORA invoice template or its calculation code.
 
-## Features
-- Settings entry on desktop and mobile; separate settings dialog.
-- Protected Classic template; duplicate to customize.
-- Business name, multiline address and contact.
-- Upload replacement logo and signature (PNG/JPEG/WebP, maximum 1 MB each); restore originals.
-- Align, resize and offset branding images in bounded controls.
-- Rename, hide/show, reorder six standard table columns; add informational custom columns.
-- Enter per-work-item values for custom columns in the Work item editor.
-- Custom accent, table font and table text size.
-- Save reusable templates in local browser storage; invoice-specific design snapshot stored in the draft and saved invoice data.
-- Switch back to Classic without deleting invoice transactions.
+## How to use
+1. Open Settings, then choose **Duplicate Classic / Template**.
+2. Scroll to **Visual Designer & Live Preview**.
+3. Choose **Mobile**, **Desktop**, or **A4 Print**. Mobile supports 320/375/390/430px simulations.
+4. In Design mode, drag the outlined logo, business name, invoice title or signature to reposition. Use the property panel for exact X/Y offsets. You can add and edit custom text boxes.
+5. Choose Preview mode to hide selection handles, then **Apply design to invoice** or **Save as reusable template**.
+6. **Use Classic** restores the original template for the current invoice.
 
 ## Important limitations
-- This is a **settings-based visual designer**, not an unrestricted Canva-style free-drag canvas. Placement uses alignment, size and offset controls.
-- Custom columns are informational; they do not affect calculations. The six standard columns are hidden rather than deleted to protect data.
-- Uploaded images are stored in local browser data; storage limits apply. Export an invoice backup before clearing browser data. The separate reusable-template library is stored in browser localStorage and is not part of the existing invoice JSON backup.
-- Template changes are saved as invoice snapshots, but the currently active invoice's branding can change when you intentionally apply a new template.
-- Custom layouts with many columns or large logos may overflow the printable page; verify PDF and PNG exports before production use.
-- No automated real-device browser, pagination, PDF/PNG pixel comparison, or accessibility regression suite was run.
-
-## Test
-1. Open an existing invoice and confirm Classic appearance.
-2. Settings → Duplicate Classic / Template → edit → Save custom design.
-3. Add custom column; enter its value under a work item's Custom column values.
-4. Preview, print/PDF and PNG export; check table fit.
-5. Switch back to Classic and confirm original appearance.
+- This is an opt-in constrained visual editor, not unrestricted Canva. Financial tables and totals retain automatic flow/pagination and cannot be freely dragged. Freeform elements are limited to logo, business name, title, signature and custom text.
+- Mobile and Desktop simulate viewing widths of the *same A4 invoice*, not separate document designs.
+- The preview uses the existing invoice rendering code. PNG/PDF export is still provided by the original application. Full browser-level visual parity and touch tests have not been completed in this environment.
+- Classic DECORA is protected. Historical invoice snapshots and all existing financial calculations remain managed by the original code.
+- Before replacing a live deployment, back up saved invoices and test exports and multi-page invoices on your target devices.
