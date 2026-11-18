@@ -31,3 +31,9 @@ body{padding-bottom:calc(76px + env(safe-area-inset-bottom));overflow-x:hidden}.
 
 /* V5.3 configurable financial presentation rows */
 .summary-row-settings{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0}.summary-row-settings label{font-size:12px;display:flex;flex-direction:column;gap:5px;min-width:0}.summary-row-settings label:has(input[type=checkbox]){flex-direction:row;align-items:center}.summary-row-settings input[type=checkbox]{width:18px;height:18px;min-height:18px}.summary-row-settings select,.summary-row-settings input{width:100%;min-width:0}.invoice-user-divider{height:1px;background:#333;margin:4px 0}.user-divider-above{border-top:1px solid #333;padding-top:7px}@media(max-width:520px){.summary-row-settings{grid-template-columns:1fr}}
+
+/* V5.4: unobtrusive insertion points between ordered invoice rows */
+.insert-row-menu{display:flex;align-items:center;gap:8px;margin:3px 0 11px 43px;max-width:370px}
+.insert-row-menu select{min-width:0;flex:1;font-size:13px;min-height:38px;padding:7px 10px;border:1px solid #dedede;border-radius:8px;background:#fff;color:#444}
+.insert-row-menu button{white-space:nowrap;min-height:38px;padding:7px 12px;font-size:13px;border:1px dashed #b5a174;background:#faf9f6;color:#554624;border-radius:8px}
+@media(max-width:650px){.insert-row-menu{margin-left:10px;margin-right:0}.insert-row-menu select{font-size:14px}.insert-row-menu button{min-height:44px}}
