@@ -97,3 +97,106 @@ body{padding-bottom:calc(76px + env(safe-area-inset-bottom));overflow-x:hidden}.
 .studio-canvas .table-studio-resize{position:absolute;right:-9px;bottom:-9px;width:20px;height:20px;background:#1673d1;border:2px solid white;border-radius:4px;cursor:nwse-resize;touch-action:none;z-index:8}
 @media(max-width:900px){.table-studio-controls{grid-template-columns:repeat(2,minmax(0,1fr))}.table-studio-entry{gap:4px}.table-studio-entry button{min-width:34px}.table-studio-entry input{width:58px}}
 @media print{.table-studio-resize{display:none!important}.studio-canvas .table-studio-outline{outline:0!important}}
+
+
+/* DECORA V6.0 — application chrome only. Never style .sheet or printed invoice. */
+@media screen {
+:root{--ui-ink:#243044;--ui-muted:#667085;--ui-line:#e2e7ee;--ui-soft:#f6f8fb;--ui-focus:#9a6b25;--ui-shadow:0 4px 20px rgba(25,35,50,.045)}
+body{background:var(--ui-soft);color:var(--ui-ink)}
+button,.button{min-height:42px;border-radius:11px;border-color:#d9e0e8;padding:9px 14px;font-weight:600;font-size:13px;line-height:1.3;transition:background-color .15s,border-color .15s,box-shadow .15s,transform .15s;vertical-align:middle}
+button:hover,.button:hover{background:#f3f6fa;border-color:#b9c6d6}
+button:active:not(:disabled){transform:translateY(1px)}
+button:focus-visible,.button:focus-within,select:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #b88b43;outline-offset:2px}
+button:disabled{cursor:not-allowed;opacity:.45;transform:none}
+button.primary{background:#263246;border-color:#263246;color:white;box-shadow:0 2px 7px #24304420}
+button.primary:hover{background:#374861;border-color:#374861}
+.toolbar{gap:16px;padding:15px clamp(14px,2.2vw,30px);border-bottom:1px solid var(--ui-line)}
+.brand strong{letter-spacing:1.4px}.brand small{font-size:12px}
+.toolbar-actions{align-items:center;justify-content:flex-end;gap:8px}
+.toolbar-actions button{white-space:nowrap}
+.toolbar-actions #new,.toolbar-actions #save{background:#f7f9fc}
+.toolbar-actions #print{padding-inline:18px}
+main{gap:22px;padding:22px}
+.editor{border-color:var(--ui-line);border-radius:16px;box-shadow:var(--ui-shadow);padding:22px}
+.editor section{padding:20px 0;border-color:#e9edf2}
+.editor .section-head{gap:12px}
+.editor .section-head button{flex-shrink:0}
+.editor h1{font-size:22px;letter-spacing:-.4px}.editor h2{font-size:15px;letter-spacing:-.1px}
+.editor .fields{gap:12px}
+.editor label{font-size:12px;color:#526074;line-height:1.45}
+.editor input:not([type=file]),.editor textarea,.editor select,.designer-dialog input:not([type=range]),.designer-dialog textarea,.designer-dialog select{border-radius:10px;border:1px solid #cfd8e3;background:#fff;min-height:44px}
+.editor input:focus,.editor textarea:focus,.editor select:focus{border-color:#b58b42}
+.editor .item,.editor .layout-row{border-color:var(--ui-line);border-radius:12px;padding:13px;margin-block:12px;box-shadow:0 2px 7px #25304608}
+.editor .item .fields{gap:10px}
+.editor .actions{gap:9px}
+.editor .layout-controls button{min-height:35px;padding:5px 10px}
+.editor .layout-content button{min-height:36px;padding:7px 10px}
+.editor .remove{color:#a13737;border-color:#efcaca;background:#fffafa}
+.editor .remove:hover{background:#fff0f0}
+.editor .drag-handle{min-width:40px;min-height:40px;border-radius:10px;background:#f4f6f9;display:inline-flex;align-items:center;justify-content:center}
+.preview-label{font-size:13px;color:#59677b;gap:12px}
+.preview-controls{gap:10px;padding:11px 12px;border:1px solid var(--ui-line);border-radius:13px;background:#fff;margin-bottom:14px}
+.preview-controls select{min-height:40px}
+.history-row{gap:12px;padding:12px 0;border-color:#edf0f4}
+.layout-settings{gap:14px}
+.layout-action-group{padding-block:5px}
+.layout-label{font-weight:700;color:#45556b}
+#exportDialog,#workCatalogueDialog,.help-dialog,.designer-dialog{border-color:var(--ui-line);box-shadow:0 22px 70px #11182730}
+#exportDialog{border-radius:18px}
+.export-options{gap:12px}.export-options button{min-height:48px;text-align:left}
+.designer-heading{gap:16px}.designer-heading h2{letter-spacing:-.35px}
+.designer-body{gap:18px}
+.designer-dialog details,.studio-section,.table-studio-panel{border-color:var(--ui-line);border-radius:14px}
+.designer-dialog details summary{min-height:42px;display:list-item;align-content:center}
+.designer-dialog button{min-height:44px}
+.designer-template-bar,.designer-actions,.designer-add-column,.studio-toolbar,.studio-footer{gap:10px}
+.designer-column-row{gap:8px}
+.designer-column-row button{min-width:42px;min-height:42px}
+.studio-properties,.table-studio-entry{border-color:var(--ui-line);border-radius:12px}
+.studio-prop-actions{gap:8px}
+.table-studio-entry{padding:9px;gap:10px}
+.table-studio-entry button{min-width:42px;min-height:42px}
+.table-studio-controls{gap:12px}
+}
+@media screen and (max-width:900px){
+body{padding-bottom:calc(82px + env(safe-area-inset-bottom))}
+.toolbar{padding:11px 16px;flex-wrap:nowrap;gap:8px}
+.brand{min-width:0;gap:8px}.brand img{width:39px}.brand strong{font-size:17px}.brand small{font-size:10px}
+/* Keep the existing settings/help actions, but move their visible entry points into the header. */
+.toolbar-actions{display:flex;flex:0 0 auto;gap:6px;margin-left:auto}
+.toolbar-actions button{display:none}
+.toolbar-actions #designSettingsTop,.toolbar-actions .help-launch{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:7px 10px;font-size:12px;white-space:nowrap}
+.mobile-tabs{gap:8px;padding:10px 14px;background:#fff}
+.mobile-tabs button{min-height:46px;font-size:14px;font-weight:700;padding:10px 6px;border-radius:11px}
+.mobile-tabs button[aria-current=true]{background:#263246;color:#fff;border-color:#263246;box-shadow:0 2px 8px #26324625}
+.mobile-tabs #designSettingsMobile,.mobile-tabs .help-tab{display:none}
+.mobile-bottom{padding:10px 14px calc(10px + env(safe-area-inset-bottom));gap:10px;box-shadow:0 -6px 24px #2430440b}
+.mobile-bottom button{min-height:49px;padding:10px 5px;font-size:14px;border-radius:12px}
+main{padding:12px;gap:16px}
+.editor{padding:16px;border-radius:15px}
+.editor section{padding:19px 0}
+.editor .section-head{gap:10px}
+.editor .section-head button{min-height:42px;padding:8px 11px;font-size:12px}
+.editor .actions{gap:9px}
+.editor .layout-row{padding:10px;gap:7px}
+.editor .layout-controls button{min-height:38px}
+.editor .item{padding:12px}
+.preview-controls{gap:8px;padding:10px}
+.preview-controls button{min-height:42px}
+.designer-heading{padding:14px 16px}
+.designer-body{padding:14px;gap:15px}
+.designer-template-bar button,.designer-actions button{flex:1 1 140px}
+.designer-column-row{grid-template-columns:minmax(0,1fr) 56px 40px 40px 40px;gap:4px}
+.designer-column-row button{min-width:40px;min-height:42px}
+.studio-toolbar{gap:9px}.studio-properties{gap:12px}
+.table-studio-entry{gap:5px;padding:8px}.table-studio-entry button{min-width:40px;min-height:42px}
+}
+@media screen and (max-width:360px){
+.toolbar{padding-inline:10px}.brand img{width:32px}.brand strong{font-size:15px}.brand small{font-size:9px}
+.toolbar-actions #designSettingsTop,.toolbar-actions .help-launch{padding:7px 6px;font-size:11px}
+.mobile-tabs{padding-inline:10px;gap:6px}.mobile-tabs button{font-size:13px}
+.mobile-bottom{padding-inline:10px;gap:7px}.mobile-bottom button{font-size:13px}
+.editor{padding:12px}.editor .section-head button{font-size:12px}
+}
+@media (prefers-reduced-motion:reduce){button,.button{transition:none!important;transform:none!important}}
+@media print{.toolbar-actions,.mobile-tabs,.mobile-bottom{display:none!important}}

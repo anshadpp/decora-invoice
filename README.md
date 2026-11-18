@@ -1,18 +1,13 @@
-# DECORA V5.9 — Custom Table Designer
+# DECORA V6.0 — UI/UX-only update
 
-This release builds on V5.8. Classic DECORA is still the default and its renderer is not modified.
+Built directly on V5.9. All invoice calculation, rendering, designer and data JavaScript files are unchanged. The invoice A4 `.sheet` layout is not restyled.
 
-## Table customization
+## Changes
+- Consistent buttons, hover/focus/disabled states, spacing and form controls.
+- Cleaner editor sections, layout rows, history and export dialog.
+- Mobile navigation now shows three primary tabs (Edit / Preview / History), while the same existing Settings and Help actions are accessible in the header.
+- Improved small-phone action sizing and designer property controls.
+- Screen-only styling; no print or invoice document geometry changes.
 
-1. Open Settings and duplicate Classic to create a custom template.
-2. Expand **Visual Designer & Live Preview → Table Designer**.
-3. Drag column headers in the canvas or use column grip/arrows to reorder. Edit relative column width in the column list.
-4. Drag the table border to position it within the printable content area. Drag the blue bottom-right handle to resize the table width. Numeric X, Y, width, and row padding inputs offer precise control.
-5. Drag row grips in the Invoice row order list or use arrow buttons. This changes actual invoice layout order; running balances are recalculated.
-6. Switch between Mobile, Desktop and A4 Print previews, then save the custom template.
-
-## Limits and testing
-
-Table geometry is constrained to the page content area; rows remain flow-based so long tables can paginate. Individual cells are not freely positioned. Column widths are relative weights and may need adjustment for long text. Touch interaction and multi-page export appearance should be verified in a browser before production use.
-
-Existing invoices remain Classic unless a custom template is selected. Back up invoices before deploying.
+## Verification
+Run manual regression testing on actual devices before deployment: Edit/Preview/History, settings/help, insert and reorder, all exports, offline refresh, touch drag, and visual comparison of PDF/PNG with V5.9.
