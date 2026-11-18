@@ -1,11 +1,9 @@
-# DECORA V5.2 — Smart balance and pagination
+# DECORA V5.3 – Editable Dynamic Totals
 
-Built from DECORA V5.1. Original source and invoice data storage keys are preserved.
+Adds movable, removable summary rows and dividers in Invoice layout. Each summary row supports an automatic/custom label, calculated/manual amount, running/work/final calculation, visibility and divider. Legacy V5.2 invoices are migrated in memory on load; original invoices remain compatible. A manual amount changes only the displayed value, not the underlying financial transactions. Manual page breaks remain removable.
 
-- Invoice Layout includes **Show both final advance balance and total balance** (off by default). The final advance balance is suppressed only when it duplicates the Total Balance. Earlier running balances remain visible. The setting is saved with each invoice and exported in JSON backups.
-- Automatic pagination retries a compact A4 layout when the last page has only closing/summary content and no work rows. Compact mode reduces whitespace, not page size; it preserves manual page breaks and explicit Separate Page mode. If content cannot fit, multiple pages remain.
-- Preview, print, PNG and ZIP share the same rendered pages.
-- PWA cache bumped to V5.2.
+## Use
+Open **Edit → Invoice layout**. Add a Summary row, move it with the arrows or drag handle, change the calculation mode, and optionally enter a manual displayed amount. Hide or remove any row. Save the invoice to persist these choices.
 
-## Deployment
-Back up your invoices, replace all site files and refresh. Validate on your phone before relying on the output for customers.
+## Important
+Back up invoices before deployment. Verify PDFs, PNG/ZIP, page fitting and physical mobile behaviour after deployment.
