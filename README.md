@@ -31,3 +31,11 @@ The order-aware calculated balance is separate from any manual displayed overrid
 - Fixed Discount and Round-off editor rendering: shared dropdown helper is now available to every row type. Previously these rows triggered a ReferenceError after insertion.
 - Discount and Round-off editor headings now respect their custom labels.
 - Existing invoice preview styling and calculation rules are unchanged.
+
+
+## V5.6 – In-app Help Center
+- Help buttons in desktop header, mobile top tabs and mobile bottom actions.
+- Searchable, read-only guide with 11 topics; mobile-friendly dialog, keyboard focus restoration and offline caching.
+- Includes a genuine DECORA invoice example image from an earlier invoice, labeled accordingly. This is **not** a capture of the current mobile editor.
+- Invoice calculations, storage schema, preview markup and export logic remain unchanged from V5.5.2.
+- Open Help without navigating away from the current draft.
