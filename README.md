@@ -1,13 +1,15 @@
-# DECORA V6.0 — UI/UX-only update
+# DECORA V6.1 – Template Management & Backup Button Consistency
 
-Built directly on V5.9. All invoice calculation, rendering, designer and data JavaScript files are unchanged. The invoice A4 `.sheet` layout is not restyled.
+Built on V6.0. Classic DECORA invoice rendering and financial calculations are not modified.
 
 ## Changes
-- Consistent buttons, hover/focus/disabled states, spacing and form controls.
-- Cleaner editor sections, layout rows, history and export dialog.
-- Mobile navigation now shows three primary tabs (Edit / Preview / History), while the same existing Settings and Help actions are accessible in the header.
-- Improved small-phone action sizing and designer property controls.
-- Screen-only styling; no print or invoice document geometry changes.
+- My Templates gallery lists Classic and saved reusable designs with Use, Edit, Duplicate, Rename, Delete.
+- Save Template and Save & Apply are distinct; invoice-only Save remains available.
+- Deleting a saved design refreshes gallery and selector; if active, user chooses Classic or retaining the invoice snapshot.
+- Template storage failures do not show false success; library writes are rolled back on failure.
+- Import Backup and Export Backup share matching button dimensions and styles, including mobile layout.
+- Service worker cache and asset versions bumped to 6.1.
 
-## Verification
-Run manual regression testing on actual devices before deployment: Edit/Preview/History, settings/help, insert and reorder, all exports, offline refresh, touch drag, and visual comparison of PDF/PNG with V5.9.
+## Limitations / manual verification
+- Gallery preview is a compact template identity card, not a full rendered invoice thumbnail.
+- Test template save/delete/rename, refresh, backup round trip, mobile and export workflows in a browser before deployment.
