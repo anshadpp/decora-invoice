@@ -12,3 +12,13 @@ In **Invoice layout**, use the small **row type / + Insert** controls immediatel
 
 ## Notes
 The order-aware calculated balance is separate from any manual displayed override. The final accounting balance is not changed by editing a summary label or amount. Existing V5.3 summary settings remain supported. Back up invoices before deploying; verify PDF, PNG, ZIP and mobile PWA in a real browser.
+
+
+## V5.5: flexible invoice adjustments and mobile navigation
+- Mobile Edit, Preview, History tabs preserve their independent scroll positions.
+- Insert travel, transport, delivery, installation, labour, site visit, service or custom charges.
+- Insert fixed or percentage discounts with work/charge or outstanding-balance basis.
+- Insert automatic nearest/up/down rupee round-off or manual signed round-off.
+- Insert signed positive/negative adjustments.
+- Adjustments follow the row order and update running and final balance calculations.
+- All rows persist in the existing invoice state and JSON backup. Printable A4 template is unchanged.
