@@ -1,18 +1,18 @@
-# DECORA Invoice Generator V5.8 — Visual Designer Preview
+# DECORA V5.9 — Custom Table Designer
 
-This release extends V5.7 without replacing the Classic DECORA invoice template or its calculation code.
+This release builds on V5.8. Classic DECORA is still the default and its renderer is not modified.
 
-## How to use
-1. Open Settings, then choose **Duplicate Classic / Template**.
-2. Scroll to **Visual Designer & Live Preview**.
-3. Choose **Mobile**, **Desktop**, or **A4 Print**. Mobile supports 320/375/390/430px simulations.
-4. In Design mode, drag the outlined logo, business name, invoice title or signature to reposition. Use the property panel for exact X/Y offsets. You can add and edit custom text boxes.
-5. Choose Preview mode to hide selection handles, then **Apply design to invoice** or **Save as reusable template**.
-6. **Use Classic** restores the original template for the current invoice.
+## Table customization
 
-## Important limitations
-- This is an opt-in constrained visual editor, not unrestricted Canva. Financial tables and totals retain automatic flow/pagination and cannot be freely dragged. Freeform elements are limited to logo, business name, title, signature and custom text.
-- Mobile and Desktop simulate viewing widths of the *same A4 invoice*, not separate document designs.
-- The preview uses the existing invoice rendering code. PNG/PDF export is still provided by the original application. Full browser-level visual parity and touch tests have not been completed in this environment.
-- Classic DECORA is protected. Historical invoice snapshots and all existing financial calculations remain managed by the original code.
-- Before replacing a live deployment, back up saved invoices and test exports and multi-page invoices on your target devices.
+1. Open Settings and duplicate Classic to create a custom template.
+2. Expand **Visual Designer & Live Preview → Table Designer**.
+3. Drag column headers in the canvas or use column grip/arrows to reorder. Edit relative column width in the column list.
+4. Drag the table border to position it within the printable content area. Drag the blue bottom-right handle to resize the table width. Numeric X, Y, width, and row padding inputs offer precise control.
+5. Drag row grips in the Invoice row order list or use arrow buttons. This changes actual invoice layout order; running balances are recalculated.
+6. Switch between Mobile, Desktop and A4 Print previews, then save the custom template.
+
+## Limits and testing
+
+Table geometry is constrained to the page content area; rows remain flow-based so long tables can paginate. Individual cells are not freely positioned. Column widths are relative weights and may need adjustment for long text. Touch interaction and multi-page export appearance should be verified in a browser before production use.
+
+Existing invoices remain Classic unless a custom template is selected. Back up invoices before deploying.
