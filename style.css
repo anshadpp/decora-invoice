@@ -227,3 +227,46 @@ main{padding:12px;gap:16px}
 
 /* V6.2: sample actions and custom-template visual editing */
 @media screen{.sample-action-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:12px 0 18px}.sample-action-card{display:flex;align-items:center;gap:11px;min-width:0;min-height:76px;padding:12px;border:1px solid #dfe5ec;border-radius:14px;background:linear-gradient(145deg,#fff,#f7f9fc);text-align:left;color:#1c2838;box-shadow:0 3px 10px #192c4410;cursor:pointer;transition:box-shadow .15s,border-color .15s,transform .15s}.sample-action-card:hover{border-color:#b99555;box-shadow:0 7px 20px #192c441c;transform:translateY(-1px)}.sample-action-card:focus-visible{outline:3px solid #c7a16b;outline-offset:2px}.sample-icon{flex:0 0 40px;width:40px;height:40px;display:grid;place-items:center;border-radius:11px;background:#efe8db;color:#805a29;font-size:25px}.sample-copy{display:flex;flex:1;min-width:0;flex-direction:column;gap:4px}.sample-copy strong{font-size:13px;line-height:1.25}.sample-copy small{font-size:11px;line-height:1.35;color:#657287}.sample-arrow{font-size:24px;color:#a0a9b6}.studio-extended-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:9px}.studio-draggable{touch-action:none;cursor:grab;outline-offset:2px}.studio-selected{outline:2px dashed #a87a32!important;position:relative}.studio-resize-grip{position:absolute;right:-7px;bottom:-7px;width:17px;height:17px;border:2px solid #fff;border-radius:5px;background:#b98b44;cursor:nwse-resize;touch-action:none;z-index:20;box-shadow:0 1px 5px #0003}.designer-extra-text{box-sizing:border-box}.studio-prop-actions button{min-height:40px}@media(max-width:900px){.sample-action-grid{grid-template-columns:1fr}.sample-action-card{min-height:64px}}@media(max-width:450px){.sample-action-card{padding:10px}.sample-icon{flex-basis:36px;width:36px;height:36px}}}
+
+
+/* DECORA V6.3 — screen-only UI consistency. Do not modify invoice paper, printing or export styles. */
+@media screen {
+ .preview-area{min-width:0;max-width:100%;border-radius:16px}
+ .preview-label{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;color:#263448}
+ .preview-label strong{display:block;font-size:17px;line-height:1.35;letter-spacing:-.2px}
+ .preview-label small{display:block;margin-top:3px;font-size:12px;font-weight:400;color:#687589}
+ .preview-label-hint{font-size:12px;font-weight:500;color:#687589}
+ .preview-controls{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;padding:12px;border:1px solid #e0e6ee;border-radius:13px;background:#fff;box-shadow:0 2px 8px #26344809}
+ .preview-controls button{display:inline-flex;align-items:center;justify-content:center;min-width:100px;min-height:44px;padding:9px 13px;border-radius:10px;font-weight:600;white-space:nowrap}
+ .preview-controls #pageInfo{min-width:75px;text-align:center;font-size:13px;font-weight:650;color:#4a5668;font-variant-numeric:tabular-nums}
+ .preview-controls .preview-zoom-label{display:flex;align-items:center;gap:8px;margin:0;font-size:13px;font-weight:600;white-space:nowrap;color:#475569}
+ .preview-controls #zoom{min-height:44px;max-width:155px;border-radius:10px;padding:8px 10px;font-size:16px}
+ .preview-fullscreen{min-height:44px;width:100%;border-radius:10px;margin:0 0 12px}
+ .paper-wrap{min-width:0;max-width:100%;overscroll-behavior-x:contain}
+ .editor .item-top>.remove,.editor .advance>.remove{display:inline-flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;min-width:44px;height:44px;min-height:44px;margin:0;padding:0;border:1px solid #f0caca;border-radius:11px;background:#fff8f8;color:#ae3434;font-size:22px;font-weight:500;line-height:1;cursor:pointer;transition:background .15s,border-color .15s,box-shadow .15s}
+ .editor .item-top>.remove:hover,.editor .advance>.remove:hover{background:#ffeded;border-color:#e7a5a5}
+ .editor .item-top>.remove:focus-visible,.editor .advance>.remove:focus-visible,.design-file-field input:focus-visible{outline:3px solid #b58b42;outline-offset:3px}
+ .editor .item-top{align-items:center;gap:10px}
+ .editor .item-top>.work-input-row,.editor .item-top>label{min-width:0;flex:1}
+ .editor .advance{align-items:end;gap:9px}
+ .design-file-field{display:flex!important;flex-direction:column;gap:7px;min-width:0;font-weight:650!important;color:#344256!important}
+ .design-file-field small{font-size:12px;font-weight:400;color:#687589}
+ .designer-dialog .design-file-field input[type=file]{display:block;width:100%;max-width:100%;min-width:0;min-height:48px;padding:6px 8px;border:1px dashed #b8c5d6;border-radius:11px;background:#f8fafc;color:#526074;font:inherit;font-size:13px;line-height:32px;cursor:pointer;overflow:hidden;text-overflow:ellipsis}
+ .designer-dialog .design-file-field input[type=file]::file-selector-button{min-height:34px;margin-right:10px;padding:7px 12px;border:1px solid #d2dbe6;border-radius:8px;background:#fff;color:#27364b;font:inherit;font-size:13px;font-weight:650;cursor:pointer}
+ .designer-dialog .design-file-field input[type=file]:hover::file-selector-button{background:#edf2f8}
+}
+@media screen and (max-width:900px){
+ .preview-area{padding:12px!important}
+ .preview-controls{gap:8px;padding:10px}
+ .preview-controls button{flex:1 1 90px;min-width:0}
+ .preview-controls #pageInfo{flex:0 0 70px;min-width:0}
+ .preview-controls .preview-zoom-label{flex:1 1 100%;justify-content:space-between;border-top:1px solid #edf0f4;padding-top:9px}
+ .preview-controls #zoom{width:min(180px,65%);max-width:none}
+ .preview-label-hint{display:none}
+ .editor .advance>.remove{align-self:end}
+}
+@media screen and (max-width:360px){
+ .preview-controls button{font-size:12px;padding:8px 5px}
+ .preview-controls #pageInfo{flex-basis:60px;font-size:12px}
+ .designer-dialog .design-file-field input[type=file]::file-selector-button{padding:7px 8px;margin-right:5px}
+}
